@@ -7,5 +7,6 @@ target 'MarvelCharacterSearch' do
 
   pod 'Alamofire'
   pod 'SwiftyJSON'
+  pod 'SwiftHash'
 
 end
