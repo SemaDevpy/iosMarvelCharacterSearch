@@ -10,11 +10,17 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var searchBar: UISearchBar!
+    
+    let marvelManager = MarvelManager()
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    
 
 }
 

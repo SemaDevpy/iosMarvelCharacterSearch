@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8DB58AD9E0D78AC2908B43B6 /* Pods_MarvelCharacterSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C95A928E9EDD7FDB857ED1A /* Pods_MarvelCharacterSearch.framework */; };
-		A272980125BDA449000254C2 /* marvelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A272980025BDA449000254C2 /* marvelManager.swift */; };
+		A272980125BDA449000254C2 /* MarvelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A272980025BDA449000254C2 /* MarvelManager.swift */; };
 		A279BE7625BC111600876483 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A279BE7525BC111600876483 /* AppDelegate.swift */; };
 		A279BE7825BC111600876483 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A279BE7725BC111600876483 /* SceneDelegate.swift */; };
 		A279BE7A25BC111600876483 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A279BE7925BC111600876483 /* FirstViewController.swift */; };
@@ -19,7 +19,7 @@
 
 /* Begin PBXFileReference section */
 		6C95A928E9EDD7FDB857ED1A /* Pods_MarvelCharacterSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarvelCharacterSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A272980025BDA449000254C2 /* marvelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = marvelManager.swift; sourceTree = "<group>"; };
+		A272980025BDA449000254C2 /* MarvelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelManager.swift; sourceTree = "<group>"; };
 		A279BE7225BC111600876483 /* MarvelCharacterSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelCharacterSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A279BE7525BC111600876483 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A279BE7725BC111600876483 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,7 +104,7 @@
 		A279BE8B25BC403A00876483 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A272980025BDA449000254C2 /* marvelManager.swift */,
+				A272980025BDA449000254C2 /* MarvelManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -233,7 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A272980125BDA449000254C2 /* marvelManager.swift in Sources */,
+				A272980125BDA449000254C2 /* MarvelManager.swift in Sources */,
 				A279BE7A25BC111600876483 /* FirstViewController.swift in Sources */,
 				A279BE7625BC111600876483 /* AppDelegate.swift in Sources */,
 				A279BE7825BC111600876483 /* SceneDelegate.swift in Sources */,
