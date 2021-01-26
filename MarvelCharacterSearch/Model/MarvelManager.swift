@@ -14,6 +14,10 @@ class MarvelManager{
     let privateKey = "0f14064e5a47787a54aeaff4b06d9de5cd1464f2"
     let publicKey = "b60674c322f3ce85dc9320cacc33d4a5"
     let limit = 50
+    var offsetGenerator : Int?{
+        let list = 1...1500
+        return list.randomElement()
+    }
     
     
     func getCredentials() -> String {
@@ -27,18 +31,23 @@ class MarvelManager{
     
     
     
-    func fetchCharacter(with name : String?){
+    func fetchCharacter(with name : String? = " "){
+        var url : String = ""
         let startsWith: String
-        if let name = name, !name.isEmpty {
-            startsWith = "nameStartsWith=\(name.replacingOccurrences(of: " ", with: "%20"))"
-        } else {
-            startsWith = ""
+        if let safeName = name{
+            if safeName != " "{
+                startsWith = "nameStartsWith=\(safeName.replacingOccurrences(of: " ", with: "%20"))"
+                url = basePath + "&limit=\(limit)&" + startsWith + getCredentials()
+            }else{
+                url = basePath + "&offset=\(offsetGenerator!)&limit=\(limit)&" + getCredentials()
+            }
+            
         }
-        
-        
-        let url = basePath + "&limit=\(limit)&" + startsWith + getCredentials()
         print(url)
     }
+    
+    
+    
     
     
         
