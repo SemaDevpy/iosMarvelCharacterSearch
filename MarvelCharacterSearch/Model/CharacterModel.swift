@@ -11,4 +11,10 @@ import Foundation
 
 struct CharacterModel {
     let name : String
+    let description : String
+    let image : String
+    let comics : [String]
+    let series : [String]
+    let stories : [String]
+    let events : [String]
 }

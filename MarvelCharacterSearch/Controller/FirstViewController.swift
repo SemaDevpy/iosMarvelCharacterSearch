@@ -19,7 +19,7 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         marvelManager.fetchCharacter()
-        
+        marvelManager.delegate = self
         collectionView.register(MyCollectionViewCell.nib(), forCellWithReuseIdentifier: MyCollectionViewCell.identifier)
         
         
@@ -47,12 +47,12 @@ extension FirstViewController : UISearchBarDelegate{
 extension FirstViewController : UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return result.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyCollectionViewCell", for: indexPath) as! MyCollectionViewCell
-        cell.nameLabel.text = "Iron Man"
+        cell.nameLabel.text = result[indexPath.row].name
         cell.imageView.image = UIImage(named: "iron-man")
         return cell
     }
@@ -94,9 +94,19 @@ extension FirstViewController : UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 15
     }
+}
+//MARK: - MarvelManagerDelegate
+extension FirstViewController : MarvelManagerDelegate{
+    func didUpdateBook(_ marvelManager: MarvelManager, characters: [CharacterModel]) {
+        result = characters
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
+    }
+    
+    func didFailWithError(error: Error) {
+        print("error")
+    }
     
     
-    
-    
-
 }
