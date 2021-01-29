@@ -14,6 +14,7 @@ import SwiftyJSON
 protocol MarvelManagerDelegate {
     func didUpdateBook(_ marvelManager : MarvelManager, characters: [CharacterModel])
     func didFailWithError(error : Error)
+    func noResult()
 }
 
 
@@ -71,6 +72,11 @@ class MarvelManager{
                 let json = JSON(value)
         
                 var listOfHeroes : [CharacterModel] = []
+      
+                if json["data"]["results"].arrayValue.isEmpty{
+                    self.delegate?.noResult()
+                }
+                
                 
                 for ( _,subjson)  in json["data"]["results"]{
                     let name = subjson["name"].stringValue
@@ -103,11 +109,6 @@ class MarvelManager{
                     self.delegate?.didUpdateBook(self, characters: listOfHeroes)
                     
                 }
-                
-                
-                
-                
-                
             case .failure(let error):
                 self.delegate?.didFailWithError(error: error)
             }

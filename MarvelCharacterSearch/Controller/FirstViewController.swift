@@ -17,6 +17,9 @@ class FirstViewController: UIViewController {
     let marvelManager = MarvelManager()
     var result : [CharacterModel] = []
 
+    var emptyResults = false
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         marvelManager.fetchCharacter()
@@ -55,30 +58,17 @@ extension FirstViewController : UICollectionViewDataSource{
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyCollectionViewCell", for: indexPath) as! MyCollectionViewCell
         cell.nameLabel.text = result[indexPath.row].name
         
-        
-        var safe = result[indexPath.row].image
-        safe.insert("s", at: safe.index(safe.startIndex, offsetBy: 4))
-        print(safe)
-        
-        
-        
-        
         if result[indexPath.row].image != " "{
-            cell.imageView.sd_setImage(with: URL(string: result[indexPath.row].image)  , completed: nil)
+            cell.imageView.sd_setImage(with: URL(string: "\(result[indexPath.row].image)/portrait_medium.jpg")  , completed: nil)
         }else{
             cell.imageView.image = UIImage(named: "iron-man")
         }
-        
-        
-        
-        
+
         return cell
     }
     
     
-//    func numberOfSections(in collectionView: UICollectionView) -> Int {
-//        return 4
-//    }
+
     
 }
 
@@ -117,6 +107,7 @@ extension FirstViewController : UICollectionViewDelegateFlowLayout{
 extension FirstViewController : MarvelManagerDelegate{
     func didUpdateBook(_ marvelManager: MarvelManager, characters: [CharacterModel]) {
         result = characters
+        searchBar.placeholder = "search..."
         DispatchQueue.main.async {
             self.collectionView.reloadData()
         }
@@ -126,5 +117,8 @@ extension FirstViewController : MarvelManagerDelegate{
         print("error")
     }
     
+    func noResult() {
+        searchBar.placeholder = "No results, search again..."
+    }
     
 }
