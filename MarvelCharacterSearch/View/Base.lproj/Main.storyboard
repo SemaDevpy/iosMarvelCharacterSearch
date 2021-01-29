@@ -65,11 +65,135 @@
                     <connections>
                         <outlet property="collectionView" destination="w3j-Ag-6zp" id="kBN-QY-g8F"/>
                         <outlet property="searchBar" destination="2AX-Tj-lX1" id="aY8-5J-QrH"/>
+                        <segue destination="tJK-YF-aPf" kind="show" identifier="goToHero" id="3Jz-cL-0jr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uEe-ic-GeM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2765.217391304348" y="105.80357142857143"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="nDX-dv-kbR">
+            <objects>
+                <viewController id="tJK-YF-aPf" customClass="SecondViewController" customModule="MarvelCharacterSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GJ5-5w-2rt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fJ1-wG-mA7">
+                                <rect key="frame" x="0.0" y="488" width="414" height="408"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDh-bg-pIH">
+                                        <rect key="frame" x="224" y="158" width="170" height="60"/>
+                                        <color key="backgroundColor" red="0.85241240259999995" green="0.89418643710000001" blue="0.86743766069999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="VF3-kR-SW1"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="hpr-4U-o9x"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MuktaMahee-Bold" family="Mukta Mahee" pointSize="25"/>
+                                        <state key="normal" title="Series">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wsm-K1-XBs">
+                                        <rect key="frame" x="20" y="238" width="170" height="60"/>
+                                        <color key="backgroundColor" red="0.85241240259999995" green="0.89418643710000001" blue="0.86743766069999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="NuJ-ww-gNw"/>
+                                            <constraint firstAttribute="width" constant="170" id="ft5-Y6-8TO"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MuktaMahee-Bold" family="Mukta Mahee" pointSize="25"/>
+                                        <state key="normal" title="Stories">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2CY-Vx-QXh">
+                                        <rect key="frame" x="224" y="238" width="170" height="60"/>
+                                        <color key="backgroundColor" red="0.85241240259999995" green="0.89418643710000001" blue="0.86743766069999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="170" id="HOd-jN-Jcx"/>
+                                            <constraint firstAttribute="height" constant="60" id="eM2-eF-hCz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MuktaMahee-Bold" family="Mukta Mahee" pointSize="25"/>
+                                        <state key="normal" title="Events">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bOQ-qv-dFX">
+                                        <rect key="frame" x="20" y="318" width="374" height="60"/>
+                                        <color key="backgroundColor" red="0.85241240259999995" green="0.89418643710000001" blue="0.86743766069999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="1eS-zf-9xg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MuktaMahee-Bold" family="Mukta Mahee" pointSize="25"/>
+                                        <state key="normal" title="More on marvel.com">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgS-gI-lEx">
+                                        <rect key="frame" x="20" y="158" width="170" height="60"/>
+                                        <color key="backgroundColor" red="0.85241240259999995" green="0.89418643710000001" blue="0.86743766069999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="170" id="5sN-fj-b65"/>
+                                            <constraint firstAttribute="height" constant="60" id="W42-DX-whN"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MuktaMahee-Bold" family="Mukta Mahee" pointSize="25"/>
+                                        <state key="normal" title="Comics">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Wsm-K1-XBs" firstAttribute="top" secondItem="qgS-gI-lEx" secondAttribute="bottom" constant="20" id="8Ao-BX-a0h"/>
+                                    <constraint firstAttribute="trailing" secondItem="bOQ-qv-dFX" secondAttribute="trailing" constant="20" id="FPU-XR-fy8"/>
+                                    <constraint firstItem="Wsm-K1-XBs" firstAttribute="leading" secondItem="fJ1-wG-mA7" secondAttribute="leading" constant="20" id="Hm5-yZ-JeO"/>
+                                    <constraint firstItem="bOQ-qv-dFX" firstAttribute="top" secondItem="Wsm-K1-XBs" secondAttribute="bottom" constant="20" id="LYg-gO-9LU"/>
+                                    <constraint firstItem="bOQ-qv-dFX" firstAttribute="top" secondItem="2CY-Vx-QXh" secondAttribute="bottom" constant="20" id="Wgs-eL-sgR"/>
+                                    <constraint firstItem="bOQ-qv-dFX" firstAttribute="leading" secondItem="fJ1-wG-mA7" secondAttribute="leading" constant="20" id="dkQ-PC-Ugj"/>
+                                    <constraint firstAttribute="bottom" secondItem="bOQ-qv-dFX" secondAttribute="bottom" constant="30" id="ebs-IH-zVG"/>
+                                    <constraint firstAttribute="trailing" secondItem="PDh-bg-pIH" secondAttribute="trailing" constant="20" id="jUb-se-dza"/>
+                                    <constraint firstItem="qgS-gI-lEx" firstAttribute="leading" secondItem="fJ1-wG-mA7" secondAttribute="leading" constant="20" id="p2S-2F-skG"/>
+                                    <constraint firstAttribute="trailing" secondItem="2CY-Vx-QXh" secondAttribute="trailing" constant="20" id="scw-TM-bgp"/>
+                                    <constraint firstItem="2CY-Vx-QXh" firstAttribute="top" secondItem="PDh-bg-pIH" secondAttribute="bottom" constant="20" id="w8h-xa-gtY"/>
+                                </constraints>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MyS-TM-jWX">
+                                <rect key="frame" x="20" y="88" width="374" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="sa6-5t-Wsa"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fJ1-wG-mA7" firstAttribute="leading" secondItem="GJ5-5w-2rt" secondAttribute="leading" id="3Jp-zX-I2J"/>
+                            <constraint firstItem="MyS-TM-jWX" firstAttribute="leading" secondItem="lPh-DS-YkX" secondAttribute="leading" constant="20" id="6f6-1M-hRe"/>
+                            <constraint firstAttribute="trailing" secondItem="fJ1-wG-mA7" secondAttribute="trailing" id="9Yp-07-H0d"/>
+                            <constraint firstItem="fJ1-wG-mA7" firstAttribute="top" secondItem="MyS-TM-jWX" secondAttribute="bottom" id="Cay-fe-HED"/>
+                            <constraint firstItem="MyS-TM-jWX" firstAttribute="trailing" secondItem="lPh-DS-YkX" secondAttribute="trailing" constant="-20" id="O3Y-WH-KZP"/>
+                            <constraint firstItem="fJ1-wG-mA7" firstAttribute="leading" secondItem="lPh-DS-YkX" secondAttribute="leading" id="Tfx-ej-iFo"/>
+                            <constraint firstAttribute="bottom" secondItem="fJ1-wG-mA7" secondAttribute="bottom" id="a4E-V9-Ofx"/>
+                            <constraint firstItem="MyS-TM-jWX" firstAttribute="top" secondItem="lPh-DS-YkX" secondAttribute="top" id="tYL-2v-epk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lPh-DS-YkX"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hAU-ia-Toh"/>
+                    <connections>
+                        <outlet property="comics" destination="qgS-gI-lEx" id="EMc-rr-D3b"/>
+                        <outlet property="descriptionTextView" destination="MyS-TM-jWX" id="Wdo-vh-Jkh"/>
+                        <outlet property="events" destination="2CY-Vx-QXh" id="MpM-Bj-VVh"/>
+                        <outlet property="series" destination="PDh-bg-pIH" id="3z5-eP-GeI"/>
+                        <outlet property="stories" destination="Wsm-K1-XBs" id="dqr-11-6oo"/>
+                        <outlet property="wevsite" destination="bOQ-qv-dFX" id="nw7-oi-0AU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eb5-wq-CHy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3605.7971014492755" y="102.45535714285714"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PPF-jv-OeY">
@@ -79,6 +203,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="naK-8r-HIU">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="20"/>

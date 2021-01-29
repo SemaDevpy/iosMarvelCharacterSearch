@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8DB58AD9E0D78AC2908B43B6 /* Pods_MarvelCharacterSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C95A928E9EDD7FDB857ED1A /* Pods_MarvelCharacterSearch.framework */; };
+		A21157A625C4032F00B839C5 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21157A525C4032F00B839C5 /* SecondViewController.swift */; };
 		A23ACB1B25BEC961009EC658 /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23ACB1A25BEC961009EC658 /* CharacterModel.swift */; };
 		A23ACB1E25BEE164009EC658 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23ACB1C25BEE164009EC658 /* MyCollectionViewCell.swift */; };
 		A23ACB1F25BEE164009EC658 /* MyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A23ACB1D25BEE164009EC658 /* MyCollectionViewCell.xib */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		6C95A928E9EDD7FDB857ED1A /* Pods_MarvelCharacterSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarvelCharacterSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A21157A525C4032F00B839C5 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		A23ACB1A25BEC961009EC658 /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
 		A23ACB1C25BEE164009EC658 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		A23ACB1D25BEE164009EC658 /* MyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				A279BE7925BC111600876483 /* FirstViewController.swift */,
+				A21157A525C4032F00B839C5 /* SecondViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 				A23ACB1B25BEC961009EC658 /* CharacterModel.swift in Sources */,
 				A23ACB1E25BEE164009EC658 /* MyCollectionViewCell.swift in Sources */,
 				A279BE7A25BC111600876483 /* FirstViewController.swift in Sources */,
+				A21157A625C4032F00B839C5 /* SecondViewController.swift in Sources */,
 				A279BE7625BC111600876483 /* AppDelegate.swift in Sources */,
 				A279BE7825BC111600876483 /* SceneDelegate.swift in Sources */,
 			);

@@ -75,7 +75,16 @@ extension FirstViewController : UICollectionViewDataSource{
 //MARK: - UICollectionViewDelegate
 extension FirstViewController : UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("Im tapped")
+        performSegue(withIdentifier: "goToHero", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! SecondViewController
+        if let indexPath = collectionView.indexPathsForSelectedItems?.first?.row{
+            destinationVC.heroName = result[indexPath].name
+            destinationVC.heroDescription = result[indexPath].description
+        }
+        
     }
 }
 
