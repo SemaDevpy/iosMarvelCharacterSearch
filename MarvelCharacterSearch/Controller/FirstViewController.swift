@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class FirstViewController: UIViewController {
 
@@ -53,7 +54,24 @@ extension FirstViewController : UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyCollectionViewCell", for: indexPath) as! MyCollectionViewCell
         cell.nameLabel.text = result[indexPath.row].name
-        cell.imageView.image = UIImage(named: "iron-man")
+        
+        
+        var safe = result[indexPath.row].image
+        safe.insert("s", at: safe.index(safe.startIndex, offsetBy: 4))
+        print(safe)
+        
+        
+        
+        
+        if result[indexPath.row].image != " "{
+            cell.imageView.sd_setImage(with: URL(string: result[indexPath.row].image)  , completed: nil)
+        }else{
+            cell.imageView.image = UIImage(named: "iron-man")
+        }
+        
+        
+        
+        
         return cell
     }
     
