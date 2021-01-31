@@ -60,6 +60,10 @@ class SecondViewController: UIViewController {
     }
     
     
+    @IBAction func goToWebsitePressed(_ sender: UIButton) {
+        guard let url = URL(string: "https://www.marvel.com/") else { return }
+        UIApplication.shared.open(url)
+    }
     
     
 }

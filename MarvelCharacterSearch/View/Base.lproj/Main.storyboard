@@ -138,6 +138,9 @@
                                         <state key="normal" title="More on marvel.com">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="goToWebsitePressed:" destination="tJK-YF-aPf" eventType="touchUpInside" id="9V9-OD-HaE"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgS-gI-lEx">
                                         <rect key="frame" x="20" y="158" width="170" height="60"/>
@@ -221,13 +224,47 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myCell" id="Vku-A9-puz">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myCell" rowHeight="80" id="Vku-A9-puz" customClass="MyTableViewCell" customModule="MarvelCharacterSearch" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Vku-A9-puz" id="JQg-wS-mIb">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NgF-lc-B2F">
+                                                    <rect key="frame" x="20" y="21" width="374" height="38"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FNx-Un-WVf">
+                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="38"/>
+                                                            <color key="backgroundColor" red="0.85241240259999995" green="0.89418643710000001" blue="0.86743766069999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.19" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="58" id="3qG-iN-8Gu"/>
+                                                        <constraint firstAttribute="trailing" secondItem="FNx-Un-WVf" secondAttribute="trailing" id="gDA-JX-mRu"/>
+                                                        <constraint firstItem="FNx-Un-WVf" firstAttribute="leading" secondItem="NgF-lc-B2F" secondAttribute="leading" id="mQ3-8O-hPK"/>
+                                                        <constraint firstItem="FNx-Un-WVf" firstAttribute="top" secondItem="NgF-lc-B2F" secondAttribute="top" id="pxP-4d-KiN"/>
+                                                        <constraint firstAttribute="bottom" secondItem="FNx-Un-WVf" secondAttribute="bottom" id="ygY-ku-Ark"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="NgF-lc-B2F" firstAttribute="trailing" secondItem="JQg-wS-mIb" secondAttribute="trailingMargin" id="82G-E2-QWf"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="NgF-lc-B2F" secondAttribute="bottom" constant="10" id="Nak-nD-HT0"/>
+                                                <constraint firstItem="NgF-lc-B2F" firstAttribute="leading" secondItem="JQg-wS-mIb" secondAttribute="leadingMargin" id="c4j-8f-PS9"/>
+                                                <constraint firstItem="NgF-lc-B2F" firstAttribute="top" secondItem="JQg-wS-mIb" secondAttribute="topMargin" constant="10" id="p4l-gp-eqQ"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                        <connections>
+                                            <outlet property="label" destination="FNx-Un-WVf" id="Nb9-7e-kqO"/>
+                                            <outlet property="view" destination="NgF-lc-B2F" id="Z9s-KC-8yr"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

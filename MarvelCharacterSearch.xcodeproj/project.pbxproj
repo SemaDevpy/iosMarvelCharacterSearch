@@ -20,6 +20,7 @@
 		A279BE7F25BC111800876483 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A279BE7E25BC111800876483 /* Assets.xcassets */; };
 		A279BE8225BC111800876483 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A279BE8025BC111800876483 /* LaunchScreen.storyboard */; };
 		A2A0CA9A25C65D4800DDE87F /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A0CA9925C65D4800DDE87F /* ThirdViewController.swift */; };
+		A2A0CA9C25C66F2C00DDE87F /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A0CA9B25C66F2C00DDE87F /* MyTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		A279BE8125BC111800876483 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A279BE8325BC111800876483 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2A0CA9925C65D4800DDE87F /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		A2A0CA9B25C66F2C00DDE87F /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		B3502EB31350062EFDE8A66B /* Pods-MarvelCharacterSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelCharacterSearch.release.xcconfig"; path = "Target Support Files/Pods-MarvelCharacterSearch/Pods-MarvelCharacterSearch.release.xcconfig"; sourceTree = "<group>"; };
 		FC2DC45FE5EFDEC77B4F852C /* Pods-MarvelCharacterSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelCharacterSearch.debug.xcconfig"; path = "Target Support Files/Pods-MarvelCharacterSearch/Pods-MarvelCharacterSearch.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,6 +95,7 @@
 				A279BE8325BC111800876483 /* Info.plist */,
 				A23ACB1C25BEE164009EC658 /* MyCollectionViewCell.swift */,
 				A23ACB1D25BEE164009EC658 /* MyCollectionViewCell.xib */,
+				A2A0CA9B25C66F2C00DDE87F /* MyTableViewCell.swift */,
 			);
 			path = MarvelCharacterSearch;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				A23ACB1E25BEE164009EC658 /* MyCollectionViewCell.swift in Sources */,
 				A279BE7A25BC111600876483 /* FirstViewController.swift in Sources */,
 				A21157A625C4032F00B839C5 /* SecondViewController.swift in Sources */,
+				A2A0CA9C25C66F2C00DDE87F /* MyTableViewCell.swift in Sources */,
 				A279BE7625BC111600876483 /* AppDelegate.swift in Sources */,
 				A2A0CA9A25C65D4800DDE87F /* ThirdViewController.swift in Sources */,
 				A279BE7825BC111600876483 /* SceneDelegate.swift in Sources */,

@@ -38,12 +38,16 @@ extension ThirdViewController : UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch tag{
         case 0:
+            title = "Comicses"
             return comics.count
         case 1:
+            title = "Series"
             return series.count
         case 2:
+            title = "Stories"
             return stories.count
         case 3:
+            title = "Events"
             return events.count
         default:
             return 0
@@ -51,28 +55,32 @@ extension ThirdViewController : UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! MyTableViewCell
+        cell.view.layer.cornerRadius = 10
+        cell.view.layer.masksToBounds = true
         switch tag{
              case 0:
-                cell.textLabel?.text = comics[indexPath.row]
+                cell.label.text = comics[indexPath.row]
                  return cell
              case 1:
-                 cell.textLabel?.text = series[indexPath.row]
+                 cell.label.text = series[indexPath.row]
                  return cell
              case 2:
-                 cell.textLabel?.text = stories[indexPath.row]
+                 cell.label.text = stories[indexPath.row]
                  return cell
              case 3:
-                 cell.textLabel?.text = events[indexPath.row]
+                 cell.label.text = events[indexPath.row]
                  return cell
              default:
-                 cell.textLabel?.text = "no data"
+                cell.label.text = "no data"
                  return cell
              }
-        
-        
-        
+   
         
     }
+    
+    
+    
+    
     
 }
