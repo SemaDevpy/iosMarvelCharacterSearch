@@ -9,9 +9,13 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-
+    
     var heroName = ""
     var heroDescription = ""
+    var storiesList : [String] = []
+    var comicsList  : [String] = []
+    var eventsList  : [String] = []
+    var seriesList  : [String] = []
     
     
     @IBOutlet weak var comics: UIButton!
@@ -30,16 +34,42 @@ class SecondViewController: UIViewController {
         default:
             descriptionTextView.text = heroDescription
         }
-       navigationItem.backBarButtonItem = UIBarButtonItem(title: "Search", style: .plain, target: nil, action: nil)
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Search", style: .plain, target: nil, action: nil)
         comics.makeCircle()
         series.makeCircle()
         stories.makeCircle()
         events.makeCircle()
         wevsite.makeCircle()
     }
-
-
+    
+    
+    
+    @IBAction func btnTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: "goToTables", sender: sender)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! ThirdViewController
+        if let button = sender as? UIButton {
+            destinationVC.tag = button.tag
+            destinationVC.comics = comicsList
+            destinationVC.stories = storiesList
+            destinationVC.series = seriesList
+            destinationVC.events = eventsList
+        }
+    }
+    
+    
+    
+    
 }
+
+
+
+
+
+
+
 extension UIButton{
     func makeCircle(){
         self.layer.cornerRadius = 15

@@ -83,6 +83,10 @@ extension FirstViewController : UICollectionViewDelegate{
         if let indexPath = collectionView.indexPathsForSelectedItems?.first?.row{
             destinationVC.heroName = result[indexPath].name
             destinationVC.heroDescription = result[indexPath].description
+            destinationVC.seriesList = result[indexPath].series
+            destinationVC.comicsList = result[indexPath].comics
+            destinationVC.storiesList = result[indexPath].stories
+            destinationVC.eventsList = result[indexPath].events
         }
         
     }
